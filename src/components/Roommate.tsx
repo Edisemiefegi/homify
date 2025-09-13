@@ -13,7 +13,7 @@ function Roommate() {
       <div className="w-1/3 bg-gray-400/60 z-20 absolute h-full"></div>
       <Carousel autoplay images={images} />
       <div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-center space-y-6 w-11/12 sm:w-10/12">
+        <div  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-center space-y-6 w-11/12 sm:w-10/12">
           <h2 className="text-4xl font-bold text-white">
             Find Your Ideal Roommate
           </h2>

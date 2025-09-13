@@ -27,11 +27,11 @@ function Tab({ options, col }: Props) {
 
   return (
     <div className={`w-full flex gap-10` + (col ? " flex-col" : "")}>
-      {options?.map((tab, index) => {
+      {options?.map((tab) => {
         const isActive = tab.path && location.pathname === tab.path;
         return (
           <Button
-            key={index}
+            key={tab.value}
             variant="text"
             className={`!px-0 !py-0 transition ${isActive
               ? "!font-semibold text-primary border-b-2 border-primary"
