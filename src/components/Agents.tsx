@@ -1,4 +1,3 @@
-import React from "react";
 import { agents } from "../types";
 import Card from "./base/Card";
 import Button from "./base/Button";
