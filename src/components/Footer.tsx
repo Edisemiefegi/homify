@@ -14,7 +14,7 @@ function Footer() {
           <a href="#" className="hover:text-white">
             Contact Us
           </a>
-            <a href="#" className="hover:text-white">
+            <a href="https://portfolio-k97c.onrender.com/" className="hover:text-white">
            My Portfolio
           </a>
         </div>

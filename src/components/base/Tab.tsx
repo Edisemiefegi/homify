@@ -9,10 +9,11 @@ export type Options = {
 
 interface Props {
   options?: Options[];
-  col?: boolean
+  col?: boolean;
+  onSelect?: () => void
 }
 
-function Tab({ options, col }: Props) {
+function Tab({ options, col, onSelect }: Props) {
   const navigate = useNavigate();
 
   // info about current url
@@ -22,6 +23,7 @@ function Tab({ options, col }: Props) {
   const handleClick = (tab: Options) => {
     if (tab.path) {
       navigate(tab.path);
+      onSelect?.() //  trigger callback when clicked
     }
   };
 

@@ -38,7 +38,10 @@ function Review() {
       <Card className="w-full space-y-3 ">
         <p className="text-lg font-medium">Leave a Review</p>
         <hr className="text-gray-400" />
-        <form action=" " className="space-y-4 ">
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          alert("Form submitted");
+        }} action=" " className="space-y-4 ">
           <Input placeholder="you@example.com" labelUp="Email" />
           <div className="grid grid-cols-2 gap-2">
             <Input placeholder="Enter a title" labelUp="Title" />

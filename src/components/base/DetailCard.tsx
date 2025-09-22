@@ -65,17 +65,17 @@ function DetailCard({ card }: DetailCardProps) {
         </div>
       </div>{" "}
       {/* content */}
-      <div className="py-6 relative h-40 flex flex-col gap-1 items-center  text-center">
+      <div onClick={() =>
+        navigate(
+          `/${card.propertyType
+            .toLowerCase()
+            .replace(/\s+/g, "")}/${card.title
+              .toLowerCase()
+              .replace(/\s+/g, "")}`
+        )
+      } className="py-6 relative h-40 flex flex-col gap-1 items-center  text-center">
         <h1
-          onClick={() =>
-            navigate(
-              `/${card.propertyType
-                .toLowerCase()
-                .replace(/\s+/g, "")}/${card.title
-                .toLowerCase()
-                .replace(/\s+/g, "")}`
-            )
-          }
+
           className="text-xl font-medium hover:text-primary cursor-pointer"
         >
           {card.title}

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./base/Button";
 import Carousel from "./base/Carousel";
 
@@ -7,6 +8,8 @@ function Roommate() {
     "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
     "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80",
   ];
+
+  const navigate = useNavigate()
 
   return (
     <div className="w-full h-screen relative">
@@ -20,7 +23,7 @@ function Roommate() {
           <p className="text-white text-lg font-semibold">
             Connect with compatible housemates effortlessly.
           </p>
-          <Button className="bg-primary   ">
+          <Button className="bg-primary" onclick={() => navigate("/roommate")}>
             Get Started
           </Button>
         </div>

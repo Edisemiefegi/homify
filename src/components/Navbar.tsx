@@ -15,7 +15,6 @@ function Navbar({ className = "" }: Props) {
     { path: "/for-rent", label: "For Rent", value: "Rent" },
     { path: "/for-sale", label: "For Sale", value: "Home" },
     { path: "/roommate", label: "Roommate", value: "Home" },
-    { path: "/contact", label: "Favourite", value: "Home" },
   ];
 
   return (
@@ -25,6 +24,7 @@ function Navbar({ className = "" }: Props) {
         <p className="font-medium text-lg">
           Homi<span className="text-primary">F</span>y
         </p>
+
 
         {/* mobile bar Icon */}
         <Button
@@ -43,7 +43,7 @@ function Navbar({ className = "" }: Props) {
         {/* Mobile Nav */}
         {open && (
           <div className="absolute top-10 z-80 p-6 left-0 w-full bg-white/95 shadow-md md:hidden">
-            <Tab options={navlink} col />
+            <Tab options={navlink} col onSelect={() => setOpen(false)} />
           </div>
         )}
       </nav>

@@ -29,8 +29,8 @@ function RoommateCardComponent({ card }: Props) {
         ))}
       </div>
       <div className="flex gap-2">
-        <Button variant="outline" onclick={() => alert("coming soon!")}>View Profile</Button>
-        <Button onclick={() => alert("coming soon!")} >Connect</Button>
+        <Button variant="outline" onclick={() => alert("seen!")}>View Profile</Button>
+        <Button onclick={() => alert("connected!")} >Connect</Button>
       </div>
     </Card>
   );

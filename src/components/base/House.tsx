@@ -12,7 +12,7 @@ interface Props {
 
 
 function House({ breadcrumb, card }: Props) {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const details = [
     { text: card.propertyType, value: "Property Type" },
@@ -84,7 +84,7 @@ const navigate = useNavigate();
               {idx > 0 && <i className="pi pi-angle-right"></i>}
               {item.link ? (
                 <Button
-                onclick={() => navigate(item.link!)}
+                  onclick={() => navigate(item.link!)}
                   variant="text"
                   className="!text-xs text-primary !px-0 !py-0"
                 >
@@ -148,8 +148,8 @@ const navigate = useNavigate();
           {details.map((detail, index) => (
             <div className="flex flex-col text-center items-center" key={index}>
               <p className="flex  gap-1">
-               { detail.icon && (<img src={detail.icon} alt={detail.text} className="w-4 h-4" />
-               )}
+                {detail.icon && (<img src={detail.icon} alt={detail.text} className="w-4 h-4" />
+                )}
                 <span className="font-medium">{detail?.value}</span>
               </p>
               <p>{detail?.text}</p>
@@ -306,7 +306,10 @@ const navigate = useNavigate();
             </div>
           </div>
 
-          <form action=" " className="space-y-4 ">
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            alert("Form submitted");
+          }} action="" className="space-y-4 ">
             <Input placeholder="Name" />
             <Input placeholder="Email" />
             <Input placeholder="Phone" />
@@ -321,18 +324,18 @@ const navigate = useNavigate();
               ]}
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              <Button>Send Message</Button>
+              <Button >Send Message</Button>
               <Button variant="outline">Call</Button>
             </div>
           </form>
         </Card>
 
-       
+
       </main>
-       {/* review  */}
-        <div className="">
-          <Review/>
-        </div>
+      {/* review  */}
+      <div className="">
+        <Review />
+      </div>
     </main>
   );
 }

@@ -86,7 +86,7 @@ function Hero({
             <h1 className="font-bold text-4xl">{heading}</h1>
             <p className="w-full md:w-2/3">{text}</p>
             {showButton && (
-              <Button onclick={() => alert("coming soon!")}>
+              <Button onclick={() => alert("profile created!")}>
                 {" "}
                 <i className="pi pi-plus text-xs"></i>Create Your Profile
               </Button>

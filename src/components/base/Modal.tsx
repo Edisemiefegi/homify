@@ -20,7 +20,7 @@ const navigate = useNavigate();
   ];
 
   return (
-    <Card className="fixed !border-none sm:top-10 top-20 left-1/2 -translate-x-1/2 z-50 w-11/12 sm:w-10/12  !p-0 overflow-hidden ">
+    <Card className="fixed !border-none sm:top-10  left-1/2 -translate-x-1/2 z-50 w-11/12 sm:w-10/12 h-full sm:h-fit top-0  !p-0 overflow-hidden ">
       <div className="py-2 px-8 bg-black text-white flex justify-between">
         <p>HomiFy</p>
         <div className="flex">
@@ -33,7 +33,7 @@ const navigate = useNavigate();
           </Button>
         </div>
       </div>
-      <div className="grid overflow-y-scroll h-96 grid-cols-3 gap-6 p-8">
+      <div className="grid overflow-y-scroll sm:h-96 grid-cols-3 gap-6 p-8">
         <div className="md:col-span-2 col-span-3 h-96">
           <Carousel images={details.imageUrls} />
         </div>
